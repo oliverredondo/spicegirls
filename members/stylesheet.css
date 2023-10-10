@@ -242,32 +242,300 @@ a {
   .header {
     background-color: khaki;
   }
-
+  .header {
+    padding-top: 0;
+    min-width: 330px;
+    position: sticky;
+    top: 40px;
+    height: 0;
+    text-align: center;
+    border: 0px;
+  }
+  
+  .header__text {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5.25rem;
+  }
+  
+  .wordart.blues .text {
+    font-family: Impact, sans-serif;
+    color: var(--color-box3light);
+    -webkit-text-stroke: 0.01em #0000aa;
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa,Strength=1);
+    text-shadow: 0.13em -0.13em 0px #0000aa;
+    letter-spacing: -0.05em;
+  }
+  
   .header-picture-container {
-    height: 92.5vh;
-  }
-
-  .layer-transparent-girls {
-    max-width: 768px;
-  }
-
-  .members,
-  .albums,
-  .videos {
     position: relative;
-    max-width: 960px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    min-height: 640px;
   }
-}
-
-@media only screen and (min-width: 640px) {
+  
+  .layer-transparent-girls {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .layer-background {
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .text-nowrap {
+    white-space: nowrap;
+  }
+  
+  /* HEADER ENDS HERE */
+  
+  .landing__title {
+    padding: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    font-family: helvetica, arial;
+  }
+  
+  .members {
+    border: 10px solid var(--color-box1dark);
+    background-color: var(--color-box1light);
+  }
+  
+  .members-flex {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .members__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+  }
+  
+  .members__img {
+    border-radius: 25%;
+    object-fit: cover;
+  }
+  
+  .members__img:hover {
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .members__link {
+    border-bottom: 6px dotted var(--color-box1dark);
+  }
+  
+  .members__link:hover {
+    color: var(--color-box1dark);
+  }
+  
+  .phone-img {
+    display: inline-block;
+    height: 2.5rem;
+    width: auto;
+  }
+  
+  .albums {
+    border: 10px solid var(--color-box2dark);
+    background-color: var(--color-box2light);
+  }
+  
+  .album-cover {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .album__img {
+    width: 600px;
+  }
+  
+  .albums__link {
+    border-bottom: 6px dotted var(--color-box2dark);
+  }
+  
+  .albums__link:hover {
+    color: var(--color-box2dark);
+  }
+  
+  .videos {
+    border: 10px solid var(--color-box3dark);
+    background-color: var(--color-box3light);
+    padding-bottom: 1rem;
+  }
+  
+  .video-cover {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .videos__link {
+    border-bottom: 6px dotted var(--color-box3dark);
+  }
+  
+  .videos__link:hover {
+    color: var(--color-box3dark);
+  }
+  
+  .gif {
+    position: relative;
+    display: ;
+  }
+  
+  .gif-static {
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  .footer {
+    position: relative;
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 10px solid var(--color-footerdark);
+    background-color: var(--color-footerlight);
+  }
+  
+  .footer__logo {
+    font-size: 1.5rem;
+  }
+  
   .footer__list {
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 1rem;
+    gap: 2rem;
+    font-family: helvetica, arial;
+    font-weight: bold;
   }
-}
-
-@media only screen and (min-height: 840px) {
-  .header-picture-container {
-    height: 768px;
+  
+  .logo-link {
+    color: var(--color-box3light);
+    -webkit-text-stroke: 0.01em #0000aa;
   }
-}
+  
+  .logo-link:hover {
+    color: #0000aa;
+    -webkit-text-stroke: 0.01em var(--color-box3light);
+    filter: progid:DXImageTransform.Microsoft.Glow(Color=var(--color-box3light),Strength=1);
+    text-shadow: 0.13em -0.13em 0px var(--color-box3light);
+  }
+  
+  .footer__link:hover {
+    color: var(--color-footerdark);
+  }
+  
+  /* Desktop breakpoint / media queries */
+  @media only screen and (min-width: 768px) {
+    .header-picture-container {
+      height: 92.5vh;
+    }
+  
+    .layer-transparent-girls {
+      max-width: 768px;
+    }
+  
+    .members,
+    .albums,
+    .videos {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  
+    .members:hover {
+      border: 10px solid var(--color-box1light);
+      background-color: var(--color-box1dark);
+    }
+  
+    .members:hover .members__link {
+      border-bottom: 6px dotted var(--color-box1light);
+      color: var(--color-box1light);
+    }
+  
+    .members:hover .landing__title {
+      color: var(--color-box1light);
+    }
+  
+    .members__link:hover {
+      font-style: italic;
+    }
+  
+    .albums:hover {
+      border: 10px solid var(--color-box2light);
+      background-color: var(--color-box2dark);
+    }
+  
+    .albums:hover .albums__link {
+      border-bottom: 6px dotted var(--color-box2light);
+      color: var(--color-box2light);
+    }
+  
+    .albums:hover .landing__title {
+      color: var(--color-box2light);
+    }
+  
+    .albums__link:hover {
+      font-style: italic;
+    }
+  
+    .videos:hover {
+      border: 10px solid var(--color-box3light);
+      background-color: var(--color-box3dark);
+    }
+  
+    .videos:hover .videos__link {
+      border-bottom: 6px dotted var(--color-box3light);
+      color: var(--color-box3light);
+    }
+  
+    .videos:hover .landing__title {
+      color: var(--color-box3light);
+    }
+  
+    .videos__link:hover {
+      font-style: italic;
+    }
+  
+    .video-cover {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem;
+    }
+  
+    .gif-static {
+      visibility: visible;
+    }
+  
+    .gif-static:hover {
+      opacity: 0;
+    }
+  }
+  
+  @media only screen and (min-width: 640px) {
+    .footer__list {
+      flex-direction: row;
+    }
+  }
+  
+  @media only screen and (min-height: 840px) {
+    .header-picture-container {
+      height: 768px;
+    }
+  }
+  
