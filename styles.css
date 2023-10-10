@@ -6,10 +6,6 @@
   padding: 0;
 }
 
-footer {
-  background-color: salmon;
-}
-
 ul,
 li {
   list-style: none;
@@ -25,7 +21,6 @@ a {
   text-decoration: none;
 }
 
-
 /* Global */
 
 :root {
@@ -35,6 +30,8 @@ a {
   --color-box2light: khaki;
   --color-box3dark: #4169e1;
   --color-box3light: plum;
+  --color-footerdark: #2eb1c8;
+  --color-footerlight: #ffe4e1;
 }
 
 /* Layout */
@@ -47,9 +44,7 @@ a {
 
 /* Components */
 
-.circle {
-  border-radius: 90%;
-}
+/* HEADER STARTS HERE */
 
 .header {
   padding-top: 0;
@@ -59,14 +54,12 @@ a {
   height: 0;
   text-align: center;
   border: 0px;
-
 }
 
 .header__text {
   margin-left: auto;
   margin-right: auto;
   font-size: 6rem;
-  color: white;
 }
 
 .wordart.blues .text {
@@ -76,12 +69,36 @@ a {
   filter: progid:DXImageTransform.Microsoft.Glow(Color=#0000aa,Strength=1);
   text-shadow: 0.13em -0.13em 0px #0000aa;
   letter-spacing: -0.05em;
-  text-align: center;
 }
 
-.layer-front {
+.layer-front-phone {
   position: absolute;
 }
+
+.layer-front-desktop {
+  position: absolute;
+  display: none;
+}
+
+@media (min-width: 750px) {
+  .header {
+  }
+
+  .layer-front-phone {
+    display: none;
+  }
+
+  .sticky {
+  }
+
+  .layer-front-desktop {
+    display: show;
+    position: absolute;
+    align-items: flex-end;
+  }
+}
+
+/* HEADER ENDS HERE */
 
 .landing__title {
   padding: 2rem;
@@ -125,7 +142,6 @@ a {
 .members__link:hover {
   color: var(--color-box1dark);
 }
-
 
 .phone-img {
   display: inline-block;
@@ -180,16 +196,40 @@ a {
 .footer {
   padding: 3rem;
   display: flex;
-  font-size: 1rem;
   gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 10px solid var(--color-footerdark);
+  background-color: var(--color-footerlight);
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+}
+
+.footer__pages {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1rem;
+  gap: 2rem;
+  font-family: helvetica, arial;
+  font-weight: bold;
+}
+
+.logo-link {
+  color: var(--color-box3light);
+  -webkit-text-stroke: 0.01em #0000aa;
+}
+
+.logo-link:hover {
+  color: #0000aa;
+  -webkit-text-stroke: 0.01em var(--color-box3light);
+  filter: progid:DXImageTransform.Microsoft.Glow(Color=var(--color-box3light),Strength=1);
+  text-shadow: 0.13em -0.13em 0px var(--color-box3light);
+}
+
+.footer__link:hover {
+  color: var(--color-footerdark);
 }
 
 /* CAROUSEL */
-
-/* @media (min-width: 750px) {
-  .header {
-    padding: 3rem;
-    font-size: 5rem;
-    height: 100vh;
-  }
-} */
