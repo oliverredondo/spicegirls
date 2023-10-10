@@ -4,83 +4,90 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spice Girls</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
     <header>
       <div class="header wordart blues">
         <h1 class="header__text text">Spice Girls</h1>
       </div>
-      <picture class="sticky">
-        <img src="./images/landing_transp1800.png" class="layer-front-phone" />
-        <img src="./images/landing_transp_desktop.png" class="layer-front-desktop" />
-        <img src="./images/landing_SG1800.jpg" class="layer-back"/>
-      </picture>
+      
+      <div class="header-picture-container">
+      
+
+          <img src="./assets/images/landing_transp1800.png" class="layer-transparent-girls" title="Spice Girls" alt="Spice Girls" />
+
+        <img src="./assets/images/landing_SG1800empty.jpg" class="layer-background"/>
+      </div>
     </header>
 <div>
     <main class="grid">
       <!-- <div class="scroll-container">
-        <a href="#top"><img src="./images/thumbsup100.gif" class="circle" /></a>
+        <a href="#top"><img src="./assets/images/thumbsup100.gif" class="circle" /></a>
       </div> --> 
       <header>
       <section class="members">
         <h3 class="landing__title">
-          These are the <a href="/members/" class="members__link">members,</a>
+          These are the <a href="/members" class="members__link">members</a>,
         </h3>
         <div class="members-flex">
-          <article>
-            <img src="./images/geri 300px.jpg" class="members__img" />
+          <article title="Geri">
+            <img src="./assets/images/geri 300px.jpg" class="members__img" alt="geri" />
           </article>
-          <article>
-            <img src="./images/melc 300px.jpg" class="members__img" />
+          <article title="Mel C">
+            <img src="./assets/images/melc 300px.jpg" class="members__img" alt="melc" />
           </article>
-          <article>
-            <img src="./images/victoria 300px.jpg" class="members__img" />
+          <article title="Victoria">
+            <img src="./assets/images/victoria 300px.jpg" class="members__img" alt="victoria" />
           </article>
-          <article>
-            <img src="./images/melb 300px.jpg" class="members__img" />
+          <article title="Mel B">
+            <img src="./assets/images/melb 300px.jpg" class="members__img" alt="melb"/>
           </article>
-          <article>
-            <img src="./images/emma 300px.jpg" class="members__img" />
+          <article title="Emma">
+            <img src="./assets/images/emma 300px.jpg" class="members__img" alt="emma"/>
           </article>
         </div>
       </section>
 
       <section class="albums">
         <h3 class="landing__title">
-          they published<br />3 <a href="/albums/" class="albums__link">albums</a>
+          they published <span class="text-nowrap">3 <a href="/albums/" class="albums__link">albums</a></span>
         </h3>
 
         <div class="album-cover">
           <article>
-            <img src="./images/album1.jpeg" class="album__img" />
+            <img src="./assets/images/album1.jpeg" class="album__img" />
           </article>
           <article>
-            <img src="./images/album2.jpeg" class="album__img" />
+            <img src="./assets/images/album2.jpeg" class="album__img" />
           </article>
           <article>
-            <img src="./images/album3.webp" class="album__img" />
+            <img src="./assets/images/album3.webp" class="album__img" />
           </article>
         </div>
       </section>
 
       <section class="videos">
         <h3 class="landing__title">
-          and many<br /><a href="/music-videos/" class="videos__link">music videos</a>.
+          and many <span class="text-nowrap"><a href="/music-videos/" class="videos__link">music videos</a>.</span>
         </h3>
 
         <div class="video-cover">
-          <article>
-            <img src="./images/wannabe.gif" class="video__img" />
+          <article class="gif">
+            <img src="./assets/images/wannabe.jpg" class="video__img gif-static" />
+            <img src="./assets/images/wannabe.gif" class="video__img" />
           </article>
-          <article>
-            <img src="./images/2become1.gif" class="video__img" />
+          <article class="gif">
+            <img src="./assets/images/2become1.jpg" class="video__img gif-static" />
+            <img src="./assets/images/2become1.gif" class="video__img" />
           </article>
-          <article>
-            <img src="./images/say.gif" class="video__img" />
+          <article class="gif">
+            <img src="./assets/images/say.jpg" class="video__img gif-static" />
+            <img src="./assets/images/say.gif" class="video__img" />
           </article>
-          <article>
-            <img src="./images/who.gif" class="video__img" />
+          <article class="gif">
+            <img src="./assets/images/who.jpg" class="video__img gif-static" />
+            <img src="./assets/images/who.gif" class="video__img" />
           </article>
         </div>
       </section>
@@ -91,8 +98,8 @@
         <div class="wordart blues footer__logo">
           <h2 class="text"><a href="#top" class="logo-link">Spice Girls</a></h2>
         </div>
-        <ul class="footer__pages">
-            <li><a href="/members/" class="footer__link">Members</a></li>
+        <ul class="footer__list">
+            <li><a href="/members" class="footer__link">Members</a></li>
             <li><a href="/albums/" class="footer__link">Albums</a></li>
             <li><a href="/muisc-videos/" class="footer__link">Music Videos</a></li>
         </ul>
@@ -107,9 +114,9 @@
 <!-- <div class="members__text">
           The members are<br />
           Geri Halliwell,
-          <img src="./images/victoria128.gif" class="phone-img" /> Adams,
-          <img src="./images/melc128.gif" class="phone-img" /> C,
-          <img src="./images/melb128.gif" class="phone-img" /> B and
-          <img src="./images/emma128.gif" class="phone-img" /> Bunton.
+          <img src="./assets/images/victoria128.gif" class="phone-img" /> Adams,
+          <img src="./assets/images/melc128.gif" class="phone-img" /> C,
+          <img src="./assets/images/melb128.gif" class="phone-img" /> B and
+          <img src="./assets/images/emma128.gif" class="phone-img" /> Bunton.
         </div> -->
 <!-- DESKTOP LAYOUT END -->
