@@ -233,6 +233,7 @@ a {
     border: 10px solid var(--color-box1dark);
     background-color: var(--color-box1light);
     align-items: center;
+    height: 75vh;
   }
 
   .members-flex {
